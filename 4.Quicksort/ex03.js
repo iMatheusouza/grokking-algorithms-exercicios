@@ -1,15 +1,15 @@
 //ache o maior numero na lista usando recursao
 function max(arr) {
-  if (arr.lenght == 0) {
-    return 0;
+  if (arr.length == 1) {
+    return arr[0];
   }
 
   else {
     let currentNumber = arr.pop();
-    return currentNumber > max(arr) ? currentNumber : max(arr);
+    let nextNumber = max(arr);
+    //Se o numero atual for maior que o número que foi retornado, devolva ele, caso não, devolva o numero retornado
+    return currentNumber >= nextNumber ? currentNumber : nextNumber
   }
 }
 
-let checkArray = [1, 3, 2]
-
-console.log(max(checkArray));
+console.log(max([-5, -5, -1, -2, -1, -3, 2]));
