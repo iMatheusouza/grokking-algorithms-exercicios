@@ -1,3 +1,4 @@
+//funcao recursiva que soma todos os elementos de um array de numeros
 function sum(arr) {
   if (arr.length == 0) {
     return 0;
